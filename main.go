@@ -40,7 +40,7 @@ func main() {
 			case *kafka.Message:
 				fmt.Printf("consumed message from the queue: %s\n", string(e.Value))
 			case *kafka.Error:
-				fmt.Printf("%v\n", e)
+				fmt.Printf("Error %v\n", e)
 			}
 		}
 	}()
